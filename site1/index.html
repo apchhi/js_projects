@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <script>
+        class Human {
+            constructor(firstname, lastname, birthday) {
+                this.firstname = firstname;
+                this.lastname = lastname;
+                this.birthday = birthday;
+            }
+            
+            showInfo() {
+                console.log(`${this.firstname} ${this.lastname}`);
+            }
+            
+            showAge() {
+                const deltaTime = Date.now() - Date.parse(this.birthday);
+                
+                const age = Math.floor(deltaTime / (365 * 24 * 60 * 60 * 1000));
+                
+                console.log(`${this.firstname} ${this.lastname} is ${age} years old.`);
+            }
+        }
+         
+        const ivan = new Human('Ivan', 'Shirokov', '09 / 02 / 1997');
+        ivan.showInfo();
+        ivan.showAge();
+        
+    </script>    
+</body>
+</html>

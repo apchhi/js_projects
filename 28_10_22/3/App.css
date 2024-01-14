@@ -1,0 +1,17 @@
+.App {
+  text-align: center;
+}
+
+.App h1 {
+  font-size: 36px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+  .App {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+}
